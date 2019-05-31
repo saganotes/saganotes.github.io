@@ -597,6 +597,10 @@ footer{
     font-weight:bold;
     line-height:80px;
 }
+
+.copyright a{
+    color:#b7a292;
+}
 /*=============================== FOOTER STYLES END ================================*/
 
 
