@@ -14,9 +14,9 @@ body{
 }
 
 .logo{
-    background:url(../images/logo_blue.png) no-repeat center;  /* Change logo image */
-    height:81px;
-    width:221px;
+    background:url(../images/logo.png) no-repeat center;  /* Change logo image */
+    height:128px;
+    width:200px;
 }
 
 .soc_nav {
@@ -134,11 +134,11 @@ body{
 
 @-webkit-keyframes sky {
     0%{
-         left:0%;
+        left:0%;
         margin-left:-350px;
     }
-     100% {
-         left:100%;
+    100% {
+        left:100%;
         margin-left:0px;
     }
 }
@@ -177,8 +177,9 @@ p.slogan{
     width:600px;
     margin:80px 0 0 0;
 }
+
 #subscribe_form .input-group {
-    border:2px solid #d3ebff;  /* Change color of the subscribe input field border */
+    border:2px solid #dec5e6;  /* Change color of the subscribe input field border */
     border-radius: 8px;
     position: relative;
 }
@@ -196,8 +197,8 @@ p.slogan{
     height: 70px;
     border: none;
     padding: 0 25px;
-    background:#d3ebff; /* Change color of the subscribe input field button */
-    color:#1362ce;
+    background:#dec5e6; /* Change color of the subscribe input field button */
+    color:#852ba3;
     text-transform:uppercase;
     font-size: 20px;
 }
@@ -209,12 +210,12 @@ p.slogan{
     -moz-perspective: 1000;
     -o-perspective: 1000;
     -ms-perspective: 1000;
-    
+
     -ms-transform: perspective(1000px);
     -moz-transform: perspective(1000px);
-    -moz-transform-style: preserve-3d; 
-    -ms-transform-style: preserve-3d; 
-    
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+
     position: relative;
 }
 
@@ -252,7 +253,7 @@ p.slogan{
     transform-style: preserve-3d;
 
     position: relative;
-            
+
     transform-origin: 100% 35px;
     -webkit-transform-origin: 100% 35px;
     -o-transform-origin: 100% 35px;
@@ -316,7 +317,7 @@ p.slogan{
 .flipper .valid{
     border:2px solid #498d44;
     background:#4da946;
-    }
+}
 
 #result{
     text-align:left;
@@ -363,7 +364,7 @@ p.slogan{
     position:absolute;
     height:40px;
     width:6px;
-    background:#1362ce; /* Change color of the seconds arrow */
+    background:#852ba3; /* Change color of the seconds arrow */
     top:50%;
     left:50%;
     margin:-40px 0 0 -3px;
@@ -383,8 +384,8 @@ p.slogan{
     width: 0px;
     height: 0px;
     border-style: solid;
-    border-width: 0 7px 10px 7px; 
-    border-color: transparent transparent #1362ce transparent; /* Change color of the seconds arrow */
+    border-width: 0 7px 10px 7px;
+    border-color: transparent transparent #852ba3 transparent; /* Change color of the seconds arrow */
 }
 .tower .clock .arrow_sec:after{
     content:"";
@@ -395,7 +396,7 @@ p.slogan{
     width: 12px;
     height: 12px;
     border-radius:6px;
-    background:#1362ce; /* Change color of the seconds arrow */
+    background:#852ba3; /* Change color of the seconds arrow */
 }
 
 
@@ -403,7 +404,7 @@ p.slogan{
     position:absolute;
     height:25px;
     width:6px;
-    background:#91c7f5; /* Change color of the minutes arrow */
+    background:#c89fd5; /* Change color of the minutes arrow */
     top:50%;
     left:50%;
     margin:-25px 0 0 -3px;
@@ -424,14 +425,14 @@ p.slogan{
     height: 0px;
     border-style: solid;
     border-width: 0 7px 10px 7px;
-    border-color: transparent transparent #91c7f5 transparent; /* Change color of the minutes arrow */
+    border-color: transparent transparent #c89fd5 transparent; /* Change color of the minutes arrow */
 }
 
 .tower .window{
     position:absolute;
     height:100px;
     width:90px;
-    background:url(../images/photo.png) center center no-repeat #1d8cd9; /* Change photo in window */
+    background:url(../images/photo.png) center center no-repeat #852BA3; /* Change photo in window */
     top:460px;
     left:90px;
     overflow:hidden;
@@ -441,7 +442,7 @@ p.slogan{
     position:absolute;
     height:100px;
     width:45px;
-    background:url(../images/blind.png) center center repeat-x #5489e1; /* Change color of the blind */
+    background:url(../images/blind.png) center center repeat-x #b178c4; /* Change color of the blind */
     top:0px;
     left:-25px;
     -webkit-animation:move_left 60s ease 0s infinite;
@@ -453,7 +454,7 @@ p.slogan{
     position:absolute;
     height:100px;
     width:45px;
-    background:url(../images/blind.png) center center repeat-x #5489e1; /* Change color of the blind */
+    background:url(../images/blind.png) center center repeat-x #b178c4; /* Change color of the blind */
     top:0px;
     right:-25px;
     -webkit-animation:move_right 60s ease 0s infinite;
@@ -493,21 +494,21 @@ p.slogan{
 
 @-webkit-keyframes bubble_move {
     0%,9%,21%,100%{
-         margin-left:-20px;
+        margin-left:-20px;
         opacity:0;
     }
-     10%,20% {
-         margin-left:0;
+    10%,20% {
+        margin-left:0;
         opacity:1;
     }
 }
 @keyframes bubble_move {
     0%,9%,21%,100%{
-         margin-left:-20px;
+        margin-left:-20px;
         opacity:0;
     }
-     10%,20%{
-         margin-left:0;
+    10%,20%{
+        margin-left:0;
         opacity:1;
     }
 }
@@ -515,45 +516,45 @@ p.slogan{
 
 @-webkit-keyframes move_left {
     0%,9%,21%,100%{
-         left:0px;
+        left:0px;
     }
-     10%,20%{
-         left:-45px;
+    10%,20%{
+        left:-45px;
     }
 }
 @keyframes move_left {
     0%,9%,21%,100%{
-         left:0px;
+        left:0px;
     }
-     10%,20%{
-         left:-45px;
+    10%,20%{
+        left:-45px;
     }
 }
 
 @-webkit-keyframes move_right {
     0%,9%,21%,100%{
-         right:0px;
+        right:0px;
     }
-     10%,20% {
-         right:-45px;
+    10%,20% {
+        right:-45px;
     }
 }
 @keyframes move_right {
     0%,9%,21%,100%{
-         right:0px;
+        right:0px;
     }
-     10%,20% {
-         right:-45px;
+    10%,20% {
+        right:-45px;
     }
 }
 
 
 @-webkit-keyframes rotation {
     0%{
-         -webkit-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
-     100% {
-         -webkit-transform: rotate(360deg);
+    100% {
+        -webkit-transform: rotate(360deg);
     }
 }
 @keyframes rotation {
@@ -615,7 +616,7 @@ footer{
     }
     ul.countdown{
         margin:50px auto 0;
-        display:inline-block;        
+        display:inline-block;
     }
     #subscribe_form{
         margin:50px auto 0 auto;
@@ -651,7 +652,7 @@ footer{
         float:none;
         padding:0 0 10px;
         margin:0 0 10px;
-        border-bottom:1px solid #c4d8f4;
+        border-bottom:1px solid #dec5e6;
     }
     ul.countdown{
         display:block;
@@ -700,7 +701,7 @@ footer{
 /*=============================== RETINA STYLES BEGIN ================================*/
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     .logo{
-        background:url(../images/logo_blue@2x.png) no-repeat center / 221px 81px;
+        background:url(../images/logo@2x.png) no-repeat center / 200px 128px;
     }
     #clouds .cloud1{
         background:url(../images/cloud1@2x.png) no-repeat center / 326px 123px;
