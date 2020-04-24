@@ -22,6 +22,15 @@
         <link rel="stylesheet" href="assets/css/app.css">
         <link rel="stylesheet" href="assets/css/core.css">
 
+        <!-- Start of saganotes Zendesk Widget script -->
+        <script type="text/javascript">
+          window.zESettings = {
+            cookies: false
+          };
+        </script>
+        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1ded03cd-e693-40d8-9870-a4bdbc849abe"> </script>
+        <!-- End of saganotes Zendesk Widget script -->
+
         <script type="text/javascript">
           var _iub = _iub || [];
           _iub.csConfiguration = {
@@ -50,6 +59,9 @@
                     dataLayer.push({
                       event: "iubenda_consent_given"
                     });
+                    zE('webWidget', 'updateSettings', {
+                      cookies: true
+                    });
                   } else if (preference.consent === false) {
                     dataLayer.push({
                       event: "iubenda_consent_rejected"
@@ -69,11 +81,6 @@
           };
         </script>
         <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
-
-        <!-- Start of saganotes Zendesk Widget script -->
-        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1ded03cd-e693-40d8-9870-a4bdbc849abe"> </script>
-        <!-- End of saganotes Zendesk Widget script -->
-
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
