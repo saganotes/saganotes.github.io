@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1JTQ5M5QHJ"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-1JTQ5M5QHJ');
-        </script>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-57GWG53');</script>
+        <!-- End Google Tag Manager -->
 
         <!-- Required Meta Tags -->
         <meta charset="utf-8">
@@ -26,8 +24,51 @@
 
         <script type="text/javascript">
           var _iub = _iub || [];
-          _iub.csConfiguration = {"consentOnContinuedBrowsing":false,"lang":"en","siteId":1720123,"cookiePolicyId":62249595, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-bottom-right" }};
-        </script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+          _iub.csConfiguration = {
+            'consentOnContinuedBrowsing': false,
+            'whitelabel': false,
+            'lang': 'en',
+            'siteId': 1720123,
+            'cookiePolicyId': 62249595,
+            'banner': {
+              'acceptButtonDisplay': true,
+              'customizeButtonDisplay': true,
+              'position': 'float-bottom-right',
+              'rejectButtonDisplay': true
+            },
+            callback: {
+              onPreferenceExpressedOrNotNeeded: function(preference) {
+                dataLayer.push({
+                  iubenda_ccpa_opted_out: _iub.cs.api.isCcpaOptedOut()
+                });
+                if (!preference) {
+                  dataLayer.push({
+                    event: "iubenda_preference_not_needed"
+                  });
+                } else {
+                  if (preference.consent === true) {
+                    dataLayer.push({
+                      event: "iubenda_consent_given"
+                    });
+                  } else if (preference.consent === false) {
+                    dataLayer.push({
+                      event: "iubenda_consent_rejected"
+                    });
+                  } else if (preference.purposes) {
+                    for (var purposeId in preference.purposes) {
+                      if (preference.purposes[purposeId]) {
+                        dataLayer.push({
+                          event: "iubenda_consent_given_purpose_" + purposeId
+                        });
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          };
+        </script>
+        <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
         <!-- Start of saganotes Zendesk Widget script -->
         <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1ded03cd-e693-40d8-9870-a4bdbc849abe"> </script>
@@ -35,6 +76,11 @@
 
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57GWG53"
+                          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
         <!-- <div class="pageloader"></div>
 <div class="infraloader is-active"></div> -->
         
@@ -200,5 +246,5 @@
         <!-- Bulkit js -->
         <script src="../assets/js/landing.js"></script>
         <script src="../assets/js/auth.js"></script>
-        <script src="../assets/js/main.js"></script>    </body>  
+        <script src="../assets/js/main.js"></script>    </body>
 </html>
