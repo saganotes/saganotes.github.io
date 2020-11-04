@@ -23,15 +23,6 @@
         <link rel="stylesheet" href="../assets/css/app.css">
         <link rel="stylesheet" href="../assets/css/core.css">
 
-        <!-- Start of saganotes Zendesk Widget script -->
-        <script type="text/javascript">
-          window.zESettings = {
-            cookies: false
-          };
-        </script>
-        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=1ded03cd-e693-40d8-9870-a4bdbc849abe"> </script>
-        <!-- End of saganotes Zendesk Widget script -->
-
         <script type="text/javascript">
           var _iub = _iub || [];
           _iub.csConfiguration = {
@@ -60,9 +51,19 @@
                     dataLayer.push({
                       event: "iubenda_consent_given"
                     });
-                    zE('webWidget', 'updateSettings', {
-                      cookies: true
-                    });
+
+                    // Enable Jira Service Desk Widget
+                    var jsdScript = document.createElement('script');
+                    jsdScript.setAttribute('data-jsd-embedded', null);
+                    jsdScript.setAttribute('data-key','876d2065-c87a-4226-a585-c7126b862062');
+                    jsdScript.setAttribute('data-base-url','https://jsd-widget.atlassian.com');
+                    jsdScript.setAttribute('src','https://jsd-widget.atlassian.com/assets/embed.js');
+                    document.head.appendChild(jsdScript);
+                    jsdScript.onload = function() {
+                      var DOMContentLoaded_event = document.createEvent('Event');
+                      DOMContentLoaded_event.initEvent('DOMContentLoaded', true, true);
+                      window.document.dispatchEvent(DOMContentLoaded_event);
+                    };
                   } else if (preference.consent === false) {
                     dataLayer.push({
                       event: "iubenda_consent_rejected"
@@ -139,7 +140,7 @@
                             Blog
                         </a>
                         <!-- Navbar item -->
-                        <a class="navbar-item is-slide" href="https://saganotes.zendesk.com">
+                        <a class="navbar-item is-slide" href="https://backticklabs.atlassian.net/servicedesk">
                             Support
                         </a>
                     </div>
@@ -150,7 +151,8 @@
                     </div>
                 </div>
             </div>
-        </nav><!-- /Nav -->
+        </nav>
+        <!-- /Nav -->
         
         <!-- Terms and Conditions -->
         <section class="section no-margin">
